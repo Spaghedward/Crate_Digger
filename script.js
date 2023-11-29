@@ -21,7 +21,7 @@ function startAPI() {
         })
 
     function getArtist(token) {
-        fetch("https://api.spotify.com/v1/search?q=" + "beyonce" + "&type=artist&limit=1", {
+        fetch("https://api.spotify.com/v1/search?q=" + searchEl + "&type=artist&limit=1", {
             headers: {
                 'Authorization': 'Bearer ' + token
             },
@@ -30,7 +30,7 @@ function startAPI() {
             .then(response => response.json()).then(data => {
                 console.log(data);
                 var oldArtist = data.artists.items[0].id;
-                console.log(data.artists.items[0].id);
+                console.log(oldArtist);
                 getNewArtist(oldArtist);
             })
 
@@ -57,18 +57,29 @@ function startAPI() {
                 })
                     .then(response => response.json()).then(data => {
                         console.log(data);
-                        var playlistEl = data.external_urls;
-                        console.log(playlistEl);
-
-                        // if (playlistEl) {
-                        //     var playlist = document.getElementById('playlist')
-                        //     var newPlaylist = playlistEl + "?utm_source=oembed"
-                        //     playlist.setAttribute('src', playlistEl)
-                            
-                        // }
+                        var artistImage = data.images[2].url;
+                        var artistName = data.name;
+                        var artistImageEl = document.getElementById('artist-pic');
+                        var artistNameEl = document.getElementById('artist-name');
+                        var img = document.createElement('img');
+                        img.src = artistImage;
+                        artistImageEl.appendChild(img)
+                        artistNameEl.innerHTML = artistName
+                        var playlistURL = data.external_urls.spotify;
+                        console.log(playlistURL);
+                        embedArtist(playlistURL)
                     })
             }
 
+            function embedArtist(playlistURL) {
+                if (playlistURL) {
+                    var playlist = document.getElementById('playlist');
+                    var newPlayList = playlistURL + "?utm_source=oembed";
+                    playlist.setAttribute('src', newPlayList);
+                    
+                    
+                }
+            }
 
         }
 
