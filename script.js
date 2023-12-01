@@ -1,7 +1,8 @@
+var searchEl = document.getElementById('spot-search');
+var userInput = document.getElementById('search1');
+
 function startAPI() {
-    var queryURL = "https://api.spotify.com/v1/artists/{id}/realted-artists";
-    var searchEl = document.getElementById('spotsearch')
-    var userInput = document.getElementById('search1')
+    var table = document.getElementById('table1');
     var client_id = '3d8d15b8649240f095b004a16fd7af2c';
     var client_secret = 'dc988be7c9e542d0a6ac51c2a60adc92';
 
@@ -21,7 +22,7 @@ function startAPI() {
         })
 
     function getArtist(token) {
-        fetch("https://api.spotify.com/v1/search?q=" + searchEl + "&type=artist&limit=1", {
+        fetch("https://api.spotify.com/v1/search?q=" + userInput.value + "&type=artist&limit=1", {
             headers: {
                 'Authorization': 'Bearer ' + token
             },
@@ -57,33 +58,54 @@ function startAPI() {
                 })
                     .then(response => response.json()).then(data => {
                         console.log(data);
-                        var artistImage = data.images[2].url;
+                        console.log(data.name)
                         var artistName = data.name;
-                        var artistImageEl = document.getElementById('artist-pic');
-                        var artistNameEl = document.getElementById('artist-name');
-                        var img = document.createElement('img');
-                        img.src = artistImage;
-                        artistImageEl.appendChild(img)
-                        artistNameEl.innerHTML = artistName
-                        var playlistURL = data.external_urls.spotify;
-                        console.log(playlistURL);
-                        embedArtist(playlistURL)
-                    })
-            }
+                        var existingSaved = JSON.parse(localStorage.getItem('saved')) ?? [];
+                        var newSaved = existingSaved.concat(artistName)
+                        localStorage.setItem('saved', JSON.stringify(newSaved));
+                        for (var i = 0; i < newSaved.length; i++) {
+                            var li = document.createElement('li');
+                            var newButton = document.createElement("button");
+                            newButton.setAttribute('class', 'btn')
+                            newButton.setAttribute('type', 'search')
+                            newButton.innerHTML = newSaved[i];
+                            li.appendChild(newButton);
+                            table.appendChild(li);
+                            // var artistImage = data.images[2].url;
+                            // var artistImageEl = document.getElementById('artist-pic');
+                            // var artistNameEl = document.getElementById('artist-name');
+                            // var img = document.createElement('img');
+                            // img.src = artistImage;
+                            // artistImageEl.appendChild(img);
+                            // artistNameEl.innerHTML = artistName;
 
-            function embedArtist(playlistURL) {
-                if (playlistURL) {
-                    var playlist = document.getElementById('playlist');
-                    var newPlayList = playlistURL + "?utm_source=oembed";
-                    playlist.setAttribute('src', newPlayList);
-                    
-                    
+                            // for (let i = 0; i < data.genres.length; i++) {
+                            //     var artistGenreEl = document.getElementById('artist-genre');
+                            //     var newGenre = document.createElement('li');
+                            //     newGenre.innerHTML = data.genres[i];
+                            //     artistGenreEl.appendChild(newGenre);
+
+
+                            // }
+
+                            embedArtist(newArtist)
+                        }
+                    })
+
+                function embedArtist(newArtist) {
+                    if (newArtist) {
+                        var playlist = document.getElementById('playlist');
+                        var newPlayList = 'https://open.spotify.com/embed/artist/' + newArtist
+                        playlist.setAttribute('src', newPlayList);
+
+
+                    }
                 }
+
             }
 
         }
-
     }
 }
 
-startAPI()
+searchEl.addEventListener('click', startAPI())
