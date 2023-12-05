@@ -2,6 +2,8 @@
 
 ## Image
 
+![Alt text](image-2.png)
+
 ## Description
 
 Are you having a hard time finding new music to listen to?  Use our application to find new artists that are similar to an artist you already know.  We use the spotify api to find related artists and populate an embedded player full of their top hits.  If you like what you hear, you can search for tour dates of that artist using the TicketMaster API.  
