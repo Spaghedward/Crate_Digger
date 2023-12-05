@@ -5,7 +5,6 @@
     padding: 0;
     font-family: Georgia, 'Times New Roman', Times, serif
 }
-
 body{
     background-image: url('images/albumcovers.jpg');
 }
@@ -17,33 +16,49 @@ body h1 {
     border-radius: 25px;
     margin-bottom: 20px;
 }
-
 #logo1{
     width: 100%;
     height: auto;
     display: inline-block;
 }
-
  .ttable1 { /*Container for spotify put work in progress*/
-    background-color: #31a058;
-    display: flex
-    min-width= 350px;
-    max-width: 350px;
-    margin-left: 20px;
+    background-color: rgb(240, 233, 233);
+    width: 350px;
+    margin: 10px;
+    border-radius: 15px 15px 15px 15px;
+    border-style: inset;
+}
+.ttable1-img {
+    background-color: rgb(0, 0, 0);    
+    height: 150px;
+    margin-bottom:15px;
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+}
+.ttable1 h2 {
+    display: inline;
+    margin-top: 20px;
     
 }
-.ttable1 ul {
-    margin: 10px;
-    padding: 10px;
-    list-style-type: none;
-}
-.ttable1 ul li a {
-    display: inline-block;
-    grid-auto-columns: auto;
+.ttable1 .artistbox {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 #table1 {
-    padding: 20px;
-    scroll-margin: 200px;
+    float:left;
+}
+.ttable1 #table1 {
+    display: inline-table;
+    height: 100px;
+    width: 100px;
+    scroll-margin: 20px;
+    align-items: center;
+    background-color: blue;
+}
+.ttable1 img {
+
 }
 
 nav {
@@ -117,8 +132,11 @@ nav #logo{ /*this was for the gif we deleted on the top left*/
 
 .img2{
     background-image: url('images/ticketmaster6.jpg');
+    height: 100px;  
+}
+.img3{
+    background-image: url('images/new-bands.jpg');
     height: 100px;
-    
 }
 
 .card p{
