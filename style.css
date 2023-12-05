@@ -17,7 +17,7 @@ nav{
     text-align: center;
     background-color: black;
     box border: 5px solid;
-    height: 30vh;
+    min-height: 30vh;
     width: 100%;
     border-style: solid;
     border-width: 3px;
