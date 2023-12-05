@@ -23,8 +23,9 @@ body h1 {
     height: auto;
     display: inline-block;
 }
-.ttable1 { /*Container for spotify put work in progress*/
-    background-color: aqua;
+
+ .ttable1 { /*Container for spotify put work in progress*/
+    background-color: #31a058;
     display: flex
     min-width= 350px;
     max-width: 350px;
@@ -34,8 +35,9 @@ body h1 {
 .ttable1 ul {
     margin: 10px;
     padding: 10px;
+    list-style-type: none;
 }
-.ttable1 ul li {
+.ttable1 ul li a {
     display: inline-block;
     grid-auto-columns: auto;
 }

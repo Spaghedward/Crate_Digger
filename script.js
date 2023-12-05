@@ -68,12 +68,12 @@ function startAPI() {
                 })
                     .then(response => response.json()).then(data => {
                         console.log(data);
-                        console.log(data.name)
-                        // var artistName = data.name;
+                        console.log(data.name);
                         var saved = [
                             {
                                 id: data.id,
                                 name: data.name,
+                                url: data.external_urls.spotify
                             }
                         ]
                         var existingSaved = JSON.parse(localStorage.getItem('saved')) ?? [];
@@ -82,9 +82,9 @@ function startAPI() {
 
                         for (var i = 0; i < newSaved.length; i++) {
                             var li = document.createElement('li');
-                            var newButton = document.createElement("button");
-                            newButton.setAttribute('class', 'btn')
-                            newButton.setAttribute('type', 'button')
+                            var newButton = document.createElement("a");
+                            newButton.setAttribute('class', 'btn');
+                            newButton.setAttribute('href', newSaved[i].url)
                             newButton.innerHTML = newSaved[i].name;
                             li.appendChild(newButton);
                             table.appendChild(li);
@@ -105,16 +105,11 @@ function embedArtist(artist) {
         var playlist = document.getElementById('playlist');
         var newPlayList = 'https://open.spotify.com/embed/artist/' + artist
         playlist.setAttribute('src', newPlayList);
-        console.log('test');
+
 
     }
 }
 
-// var artistButtons = document.querySelectorAll('.btn')
-//     artistButtons.forEach(function(button) {
-//     var artistID = JSON.parse(localStorage.getItem(saved.id));
-//     button.addEventListener('click', embedArtist(artistID));
-// });
 
 document.getElementById("spot-search").addEventListener("click", startAPI)
 // startAPI()
