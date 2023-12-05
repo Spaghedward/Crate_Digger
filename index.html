@@ -47,8 +47,52 @@
                 You are one click away from your next concert!!! 
             </p>
             <lable id="artist">Artist Name</lable>
-            <input type="text" placeholder="Type artist name here." minlength="3">
-            <button id="ticket-search"> Submit </button>
+            <input
+              type="text"
+              placeholder="type artist name here"
+              minlength="3"
+              id="TmSearchInput"
+            />
+            <button id="TmSearchBtn">Submit</button>
+          </div>
+          <div id="eventsContainer"
+            w-type="event-discovery"
+            w-tmapikey="Y6RBgjf9ViUPcIwo7rb9rmCvwZjGEbLg"
+            w-googleapikey="YOUR_GOOGLE_API_KEY"
+            w-keyword=""
+            w-theme="listviewthumbnails"
+            w-colorscheme="custom"
+            w-width="300"
+            w-height="600"
+            w-size="25"
+            w-border="2"
+            w-borderradius="4"
+            w-postalcode=""
+            w-radius="25"
+            w-city=""
+            w-period="year"
+            w-layout="vertical"
+            w-attractionid=""
+            w-promoterid=""
+            w-venueid=""
+            w-affiliateid=""
+            w-segmentid=""
+            w-proportion="xxl"
+            w-titlelink="off"
+            w-sorting="groupByName"
+            w-id=""
+            w-countrycode="US"
+            w-source=""
+            w-branding="Ticketmaster"
+            w-titlecolor="#ffffff"
+            w-backgroundcolor="#06202e"
+            w-datecolor="#e00d0d"
+            w-descriptioncolor="#b7c9d3"
+            w-countercolor="#b7c9d3"
+            w-bordercolor="#16557a"
+            w-enableinfinityscroll="true"
+            w-latlong=""
+          ></div>
         </div>
         
 
@@ -88,67 +132,10 @@
 </footer>
 <script src="/kims/kims/footer-js/footer-javascript/script.js"></script>
 
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="./script1.js"></script>
+<script src="https://ticketmaster-api-staging.github.io/products-and-docs/widgets/event-discovery/1.0.0/lib/main-widget.js"></script>
+
 </html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crate Digger</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
 
-    <nav>
-        <img src="images/logo.jpg" height="150px"><br>
-            <a href="">Home</a>
-            <a href="">Spotify</a>
-            <a href="">Ticket Master</a>
-            <a href="">Meet Our Team</a>
-            <a href="">Contact</a>
-
-    </nav>
-
-    
-    <section class="container">
-        <ul id="table1">
-
-        </ul>
-        <div class="card">
-            <div class="card-img img1"></div>
-            <h2>Discover New Music Now!</h2>
-            <hr>
-            <p>Type the name of your favorite music artist/ group in the box
-                 below and our tool will search the Spotify database and show 
-                 you all similar artists.  You are one click away from finding 
-                 your new favorite song!!!
-            </p>
-            <lable id="artist">Artist Name</lable>
-            <input id="search1" type="text" placeholder="Type artist name here." minlength="3">
-            <!-- id of the submit button should be, spot-search -->
-            <a href="">Submit</a>
-        </div>
-        <div class="card">
-            <div class="card-img img2"></div>
-            <h2>ticketmaster</h2>
-            <hr>
-            <p>Like new songs you found and want to find out if that artist is on tour?
-                type the name of the artist below, and see if they are currently on tour.  
-                You are one click away from your next concert!!! 
-            </p>
-            <lable id="artist">Artist Name</lable>
-            <input type="text" placeholder="Type artist name here." minlength="3">
-            <a href="">Submit</a>
-        </div>
-        
-
-
-    </section>
-    <div style="left: 0; width: 100%; height: 352px; position: relative;"><iframe id="playlist" src="" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture;"></iframe></div>
-
-    <script src="./script.js"></script>
-
-</body>
-</html>
 
