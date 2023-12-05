@@ -9,32 +9,59 @@
 body{
     background-image: url('images/albumcovers.jpg');
 }
+body h1 {
+    color: beige;
+    background-image: url('images/5uwq.gif');
+    min-width: 500px;
+    height: 150px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
 
 #logo1{
     width: 100%;
     height: auto;
     display: inline-block;
 }
+.ttable1 {
+    background-color: aqua;
+    display: flex
+    min-width= 350px;
+    max-width: 350px;
+    margin-left: 20px;
+    
+}
+.ttable1 ul {
+    margin: 10px;
+    padding: 10px;
+}
+.ttable1 ul li {
+    display: inline-block;
+    grid-auto-columns: auto;
+}
+#table1 {
+    padding: 20px;
+    scroll-margin: 200px;
+}
 
-nav{
+nav {
     display: flex-wrap;
     text-align: center;
+    justify-content: center;
     background-color: black;
     border: 5px solid;
-    height: 30vh;
+    min-height: 30vh;
     width: 100%;
     border-style: solid;
     border-width: 3px;
     border-color: white;
-    
 }
-
 #link {
     color: whitesmoke;
 }
 
 #link:hover {
-    color: rgb(145 , 70 , 255) ;
+    color: rgb(106, 65, 168) ;
 }
 
 nav a{
@@ -46,7 +73,7 @@ nav a{
    /* -webkit-text-fill-color: rgb(255, 255, 255); */
 }
 
-nav #logo{
+nav #logo{ /*this was for the gif we deleted on the top left*/
     float: left;
 }
 
@@ -118,12 +145,28 @@ nav h1{
     margin: 20px 40px;
     
 }
-
 .card:hover{
     background-color: rgb(49, 46, 46);
     color: beige;
     cursor: pointer;
     transform: scale(1.13);
+}
+.card button {
+    background-color: black;
+    color: white;
+    width: 100px;
+    min-height: 25px;
+    border-radius: 25px;
+    justify-content: center;
+    text-align: center;
+    float: right;
+    margin-right: 30%;
+    margin-bottom: 10px;
+}
+.card button:hover {
+    background-color: white;
+    color: black;
+    
 }
 
 /* footer */
