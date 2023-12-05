@@ -1,11 +1,10 @@
 var searchEl = document.getElementById('spot-search');
-var userInput = document.getElementById('search1');
 var table = document.getElementById('table1');
 
 // This function is a post fetch to get an access token using our client id and secret.
 // The token value is stored as 'token' and used as the argument for the next function.
-function startAPI() {
 
+function startAPI() {
     var client_id = '3d8d15b8649240f095b004a16fd7af2c';
     var client_secret = 'dc988be7c9e542d0a6ac51c2a60adc92';
 
@@ -27,7 +26,8 @@ function startAPI() {
     // This function uses the user input to fetch all the data about the searched artist.
     // Then the unique artist ID is taken from the data and used as an argument in the next function.
     function getArtist(token) {
-        fetch("https://api.spotify.com/v1/search?q=" + "haken" + "&type=artist&limit=1", {
+        var userInput = document.getElementById('search1').value;
+        fetch("https://api.spotify.com/v1/search?q=" + userInput + "&type=artist&limit=1", {
             headers: {
                 'Authorization': 'Bearer ' + token
             },
@@ -36,8 +36,10 @@ function startAPI() {
             .then(response => response.json()).then(data => {
                 console.log(data);
                 var oldArtist = data.artists.items[0].id;
+                console.log(data.artists.items[0].name)
                 console.log(oldArtist);
                 getNewArtist(oldArtist);
+                console.log(userInput.value)
             })
 
         // This function uses the artist id to fetch a random related artist from spotify API.
@@ -108,11 +110,11 @@ function embedArtist(artist) {
     }
 }
 
-var artistButtons = document.querySelectorAll('.btn')
-    artistButtons.forEach(function(button) {
-    var artistID = JSON.parse(localStorage.getItem(saved.id));
-    button.addEventListener('click', embedArtist(artistID));
-});
+// var artistButtons = document.querySelectorAll('.btn')
+//     artistButtons.forEach(function(button) {
+//     var artistID = JSON.parse(localStorage.getItem(saved.id));
+//     button.addEventListener('click', embedArtist(artistID));
+// });
 
-searchEl.addEventListener('click', startAPI())
+document.getElementById("spot-search").addEventListener("click", startAPI)
 // startAPI()
