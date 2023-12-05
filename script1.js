@@ -64,3 +64,26 @@ function getEvents() {
     widget.setAttribute('w-keyword', artist);
     
   });
+
+  document.getElementById('TmSearchBtn').addEventListener('click', function() {
+    const artist = document.getElementById('TmSearchInput').value;
+    const widget = document.querySelector('div[w-type="event-discovery"]');
+    widget.setAttribute('w-keyword', artist);
+  });
+
+  document.getElementById('TmSearchBtn').addEventListener('click', function() {
+    const artist = document.getElementById('TmSearchInput').value;
+    const widget = document.querySelector('div[w-type="event-discovery"]');
+
+    // Get the old artist from local storage
+    const oldArtist = localStorage.getItem('artist');
+
+    // If there's an old artist, display its events
+    if (oldArtist) {
+      widget.setAttribute('w-keyword', oldArtist);
+      searchEvents(oldArtist);
+    }
+
+    // Save the new artist in local storage
+    localStorage.setItem('artist', artist);
+  });
