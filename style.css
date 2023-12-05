@@ -24,7 +24,7 @@ body h1 {
     display: inline-block;
 }
 .ttable1 {
-    background-color: aqua;
+    background-color: #31a058;
     display: flex
     min-width= 350px;
     max-width: 350px;
@@ -34,8 +34,9 @@ body h1 {
 .ttable1 ul {
     margin: 10px;
     padding: 10px;
+    list-style-type: none;
 }
-.ttable1 ul li {
+.ttable1 ul li a {
     display: inline-block;
     grid-auto-columns: auto;
 }
