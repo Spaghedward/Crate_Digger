@@ -74,17 +74,8 @@ nav a{
 }
 
 nav #logo{ /*this was for the gif we deleted on the top left*/
-    float: left;
+    float: right;
 }
-
-nav h1{
-    font-size: 30px;
-    color: blue;
-    text-shadow: 5px 3px 5px rgb(27, 24, 24);
-    -webkit-text-stroke: white;
-    stroke-width: 3px;
-}
-
 .container{
     display: flex;
     margin-top: 20px;
@@ -225,6 +216,7 @@ footer h2 {
 
 .email-info {
     display: inline;
+
 }
 
 /* email value */
