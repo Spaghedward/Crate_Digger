@@ -7,14 +7,15 @@
 1. Create Logo - Done
 2. Create nav bar - Done
 3. Style Nav bar - Done
+4. Added Favicon to page tab - DONE
+5. All links working -DONE
 
 #### Header Nav Bar Issues
 1. INDEX PAGE LOGO BUG is fine but upon shrink does not resize
 or stay center.  It does not overflow, but on meet the team page
 it keeps center and shrinks logo image with resize
 2.  MEET TEAM PAGE LOGO BUG - The logo view on full screen/ large screen view seems like it is aligned to the left. 
-3.  NAV BAR LINKS - Nav bar links fixed on Index, need to make the same changes to the meet the team page nav bar.
-4.  NAV BAR HOVER - Kim had the nav bar hover working over the words in the nav bar, and for some reason they are not working now.  
+3.  NAV BAR HOVER - Kim had the nav bar hover working over the words in the nav bar, and for some reason they are not working now.  
 
 #### Page Body
 1. Create cards for spotify and ticket master - DONE
@@ -55,6 +56,7 @@ new info based on new artist search.
 
 #### Page Footer issues
 1. Not really needed but maybe if we have time add hover effect to the links on the footer.
+2. Delete About US, or change to meet the team.
 
 #### MEET THE TEAM
 1. Create a new page with a photo gallery layout - DONE
