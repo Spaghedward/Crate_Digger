@@ -44,6 +44,7 @@
                 to be taken directly to their Spotify page now!</p>
             <br><br>
             <ul id="table1"></ul>
+            <button onclick="clearlocal()">Clear Results</button>
         </div>
          <!--below is the ticketmaster card-->
         <div class="card">
@@ -67,7 +68,7 @@
           </div>
           
           <div id="eventsContainer"
-            w-type=""
+            w-type="event-discovery"
             w-tmapikey="Y6RBgjf9ViUPcIwo7rb9rmCvwZjGEbLg"
             w-googleapikey="YOUR_GOOGLE_API_KEY"
             w-keyword=""
@@ -104,17 +105,7 @@
             w-enableinfinityscroll="true"
             w-latlong=""
           ></div>
-
         </div>
-            <div class="ttable1">
-                <h2>Discovered Artists</h2>
-                <ul id="table1">
-                    
-
-                </ul>
-                <button onclick="clearlocal()">Clear Results</button>
-            </div>
-        
 
     </section>
     <div style="left: 0; width: 100%; height: 352px; position: relative;"><iframe id="playlist" src="" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture;"></iframe></div>
@@ -152,7 +143,7 @@
 <script src="/kims/kims/footer-js/footer-javascript/script.js"></script>
 
 </html>
-=======
+
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="./script1.js"></script>
 <script src="https://ticketmaster-api-staging.github.io/products-and-docs/widgets/event-discovery/1.0.0/lib/main-widget.js"></script>
