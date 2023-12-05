@@ -15,7 +15,9 @@
 or stay center.  It does not overflow, but on meet the team page
 it keeps center and shrinks logo image with resize
 2.  MEET TEAM PAGE LOGO BUG - The logo view on full screen/ large screen view seems like it is aligned to the left. 
-3.  NAV BAR HOVER - Kim had the nav bar hover working over the words in the nav bar, and for some reason they are not working now.  
+    A.  Issue found, it has something to do with tailwind
+#### fucking eh, finalled got it all header/ nav fixed
+
 
 #### Page Body
 1. Create cards for spotify and ticket master - DONE
@@ -29,7 +31,6 @@ resizing the page properly - DONE
 1. Box for ticketmaster is up all the time (concerts) which should only appear after a search has been made and should vanish upson refreshing the page, and/ or needs to populate with
 new info based on new artist search.
 2. Results box STARTED for spotify search, pending finish when output fix is done to limit number of results.
-3. Need to change links on team page for nav bar for links for ticketmaster and spotify to move to search box like it does on index page. (I will fix it/ Eric)
 
 #### Spotify API
 1. Code page to pull info from spotify - DONE
