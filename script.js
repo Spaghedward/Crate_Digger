@@ -112,4 +112,9 @@ function embedArtist(artist) {
 
 
 document.getElementById("spot-search").addEventListener("click", startAPI)
-// startAPI()
+
+function clearlocal() {
+    localStorage.clear('saved');
+    window.location.reload();
+  }
+  

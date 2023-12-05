@@ -59,6 +59,8 @@ function getEvents() {
 
   document.getElementById('TmSearchBtn').addEventListener('click', function() {
     const artist = document.getElementById('TmSearchInput').value;
+    localStorage.setItem('name', artist)
     const widget = document.querySelector('div[w-type="event-discovery"]');
     widget.setAttribute('w-keyword', artist);
+    
   });
