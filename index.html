@@ -1,3 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crate Digger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <img src="images/logo.jpg" height="150px"><br>
+        <a id="link" href="./index.html">Home</a>
+        <a id="link" href="https://open.spotify.com/" target="_blank">Spotify</a>
+        <a id="link" href="https://www.ticketmaster.com/" target="_blank">Ticket Master</a>
+        <a id="link" href="team.html">Meet Our Team</a>
+        <a id="link" href="#contactUS">Contact</a>
+
+    </nav>
+
+    
+    <section class="container">
+        <ul id="table1">
+
+        </ul>
+        <div class="card">
+            <div class="card-img img1"></div>
+            <h2>Discover New Music Now!</h2>
+            <hr>
+            <p>Type the name of your favorite music artist/ group in the box
+                 below and our tool will search the Spotify database and show 
+                 you all similar artists.  You are one click away from finding 
+                 your new favorite song!!!
+            </p>
+            <lable id="artist">Artist Name</lable>
+            <input id="search1" type="text" placeholder="Type artist name here." minlength="3">
+            <!-- id of the submit button should be, spot-search -->
+            <button id="spot-search"> Submit </button>
+        </div>
+        <div class="card">
+            <div class="card-img img2"></div>
+            <h2>ticketmaster</h2>
+            <hr>
+            <p>Like new songs you found and want to find out if that artist is on tour?
+                type the name of the artist below, and see if they are currently on tour.  
+                You are one click away from your next concert!!! 
+            </p>
+            <lable id="artist">Artist Name</lable>
+            <input type="text" placeholder="Type artist name here." minlength="3">
+            <button id="ticket-search"> Submit </button>
+        </div>
+        
+
+
+    </section>
+    <div style="left: 0; width: 100%; height: 352px; position: relative;"><iframe id="playlist" src="" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture;"></iframe></div>
+
+    <script src="./script.js"></script>
+
+
+</body>
+
+<footer>
+    <h3 id="footer-logo"> Crate Digger </h3>
+        <h2 class="us">
+            <a id="us-page" href="./aboutUs.html"> 
+                About Us 
+            </a>
+        </h2>
+    <div class="footer-container" id="contactUS"></div>
+
+    <div class="footer-contact">
+        <h2>Contact Us</h2>
+        <ul>
+            <li class="footer-email"> 📧 Crate_Digger@mail.com </li>
+            <li class="footer-phone"> 📞 1(800) 867-5309 </li>
+            <li class="footer-fax"> 📠 (678) 999-8212</li>
+        </ul>
+    </div>
+
+    <div class="footer-mail-list">
+        <h2> Join Our Mailing List</h2>
+        <div class="email-info">
+        <input type="email" placeholder="Enter Your Email Address" id="user-email">
+        <input type="submit" id="email-btn" value="Subcribe">
+    </div>
+</footer>
+<script src="/kims/kims/footer-js/footer-javascript/script.js"></script>
+
+</html>
+=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,3 +151,4 @@
 
 </body>
 </html>
+
