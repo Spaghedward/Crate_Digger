@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +22,7 @@
     
     <section class="container">
        
-        <div class="card">
+        <div class="card"> <!--Spot input card-->
             <div class="card-img img1"></div>
             <h2>Discover New Music Now!</h2>
             <hr>
@@ -36,19 +35,21 @@
             <input id="search1" type="text" placeholder="Type artist name here." minlength="3"><br><br>
             <button id="spot-search"> Submit </button>
         </div>
+
         <div class="card"> <!--spot artist output-->
             <div class="card-img img3"></div>
             <h2>Check Out These Artists</h2>
             <hr>
-            <p>Here are some bands/ music artists similar to your
-                search.  If You like what you hear, click on the artist name 
-                to be taken directly to their Spotify page now!</p>
-            <br><br>
+            <p>After you search using our Spotify search tool, you will find all 
+                the bands/ artist here that have a similar sound comparded to the
+                artist you used for the search. If you like what you hear, click
+                on the artist name to be taken directly to their Spotify page now!</p>
+            <br>
             <ul id="table1"></ul>
             <button onclick="clearlocal()">Clear Results</button>
         </div>
-         <!--below is the ticketmaster card-->
-        <div class="card">
+        
+        <div class="card"> <!--this is the ticketmaster card-->
             <div class="card-img img2"></div>
             <h2>ticketmaster</h2>
             <hr>
@@ -73,8 +74,11 @@
             <div class="card-img img4"></div>
             <h2>Up Coming Events</h2>
             <hr>
-            <p>Check out where your artist is going to preform!!!</p>
-            <br><br>
+            <p>Don't miss out on another concert!!!  Search using our ticketmaster form
+                to search for a band/ music artist that you discovered on here and see
+                all of their up and coming concerts appear right here.  
+            </p>
+            <br>
             <ul id="table4"></ul>
             <button onclick="clearlocal()">Clear Results</button>
         </div>
@@ -102,7 +106,7 @@
         <h2>Contact Us</h2>
         <ul>
             <li class="footer-email"> 📧 Crate_Digger@mail.com </li>
-            <li class="footer-phone"> 📞 1(800) 867-5309 </li>
+            <li class="footer-phone"> 📞 1(800) 867-5309</li>
             <li class="footer-fax"> 📠 (678) 999-8212</li>
         </ul>
     </div>
@@ -121,6 +125,11 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="./script1.js"></script>
 <script src="https://ticketmaster-api-staging.github.io/products-and-docs/widgets/event-discovery/1.0.0/lib/main-widget.js"></script>
+
+</html>
+
+
+
 
 </html>
 
