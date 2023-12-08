@@ -59,31 +59,19 @@ function getEvents() {
 
   document.getElementById('TmSearchBtn').addEventListener('click', function() {
     const artist = document.getElementById('TmSearchInput').value;
-    localStorage.setItem('name', artist)
-    const widget = document.querySelector('div[w-type="event-discovery"]');
-    widget.setAttribute('w-keyword', artist);
+    localStorage.setItem('name', artist);
+  });
+
+  function displayEvents(data) {
+    const events = data._embedded.events;
+    const eventsContainer = document.getElementById('eventsContainer');
+  
     
-  });
+    const limitedEvents = events.slice(0, 5);
 
-  document.getElementById('TmSearchBtn').addEventListener('click', function() {
-    const artist = document.getElementById('TmSearchInput').value;
-    const widget = document.querySelector('div[w-type="event-discovery"]');
-    widget.setAttribute('w-keyword', artist);
-  });
-
-  document.getElementById('TmSearchBtn').addEventListener('click', function() {
-    const artist = document.getElementById('TmSearchInput').value;
-    const widget = document.querySelector('div[w-type="event-discovery"]');
-
-    // Get the old artist from local storage
-    const oldArtist = localStorage.getItem('artist');
-
-    // If there's an old artist, display its events
-    if (oldArtist) {
-      widget.setAttribute('w-keyword', oldArtist);
-      searchEvents(oldArtist);
-    }
-
-    // Save the new artist in local storage
-    localStorage.setItem('artist', artist);
-  });
+    limitedEvents.forEach(event => {
+        const eventElement = document.createElement('div');
+        eventElement.textContent = event.name;
+        eventsContainer.appendChild(eventElement);
+    });
+}

@@ -139,6 +139,10 @@ nav #logo{ /*this was for the gif we deleted on the top left*/
     height: 100px;
 }
 
+.img4{
+    background-image: url('./images/Concert.jpg');
+    height: 100px;
+}
 .card p{
     margin: 15px;
 }
